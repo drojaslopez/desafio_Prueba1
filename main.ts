@@ -9,6 +9,7 @@ let jobs: Job[] = [...data_job];
 
 
 /*Implementa una función que permita añadir nuevas tareas a un proyecto.*/
+console.log("prueba");
 
 
 /*Desarrolla una función que utilice métodos de array (map, filter, reduce) para
