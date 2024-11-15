@@ -1,95 +1,101 @@
 [
-    {
-        "id": "eeeb49de-b731-4213-b8a7-eefc2650daf5",
-        "name": "DesafioLatam",
-        "date_init": "17-10-2024",
-        "jobs": [
-            {
-                "id": "ff1e4df0-406d-4f33-a98f-da74aa7b2667",
-                "description": "Job",
-                "state": "pendiente",
-                "date_limit": "04-11-2024"
-            },
-            {
-                "id": "44b35068-f27b-4969-915b-9787dc9de3df",
-                "description": "Viva",
-                "state": "en progreso",
-                "date_limit": "07-04-2024"
-            }
-        ]
-    },
-    {
-        "id": "863ac31b-17c9-4ec0-8214-e13bb4a5120a",
-        "name": "Trippledex",
-        "date_init": "04-03-2024",
-        "jobs": [
-            {
-                "id": "93ef2c7b-659e-47bf-855d-0a1bd7d5d20f",
-                "description": "Prodder",
-                "state": "completada",
-                "date_limit": "17-12-2023"
-            }
-        ]
-    },
-    {
-        "id": "553d235a-8980-4088-a49e-d00d92ca4897",
-        "name": "Matsoft",
-        "date_init": "10-12-2023",
-        "jobs": [
-            {
-                "id": "643b5a34-257c-4ff3-b207-c1b0ab296eb9",
-                "description": "Zaam-Dox",
-                "state": "en progreso",
-                "date_limit": "27-04-2024"
-            },
-            {
-                "id": "8760460e-71f9-4482-8843-0ebb55cd7ce4",
-                "description": "Fintone",
-                "state": "completada",
-                "date_limit": "29-04-2024"
-            }
-        ]
-    },
-    {
-        "id": "c88969d6-634a-4f77-9461-387839da30f3",
-        "name": "Alphazap",
-        "date_init": "22-01-2024",
-        "jobs": []
-    },
-    {
-        "id": "ae002140-ae89-46b0-a364-ab2b6599cfe9",
-        "name": "Ronstring",
-        "date_init": "12-11-2024",
-        "jobs": []
-    },
-    {
-        "id": "97702430-9536-49d4-bfbf-e3bd66133036",
-        "name": "Subin",
-        "date_init": "14-01-2024",
-        "jobs": []
-    },
-    {
-        "id": "5ac75ae1-2009-43bd-b1f0-10fd66d3d864",
-        "name": "Kanlam",
-        "date_init": "02-10-2024",
-        "jobs": []
-    },
-    {
-        "id": "15744ba6-c879-4af6-bcf6-f9d19d15b142",
-        "name": "Aerified",
-        "date_init": "07-09-2024",
-        "jobs": []
-    },
-    {
-        "id": "d98d1577-2015-4875-9665-c0f453b37776",
-        "name": "Prodder",
-        "date_init": "22-03-2024",
-        "jobs": []
-    },
-    {
-        "id": "af7ee705-c0c6-4683-abee-d78c661a6bc7",
-        "name": "Otcom",
-        "date_init": "21-07-2024",
-        "jobs": []
-    }
+  {
+    "id": "Ejercicio2-b731-4213-b8a7-eefc2650daf5",
+    "name": "PruebaEjercicio2",
+    "date_init": "17-10-2024",
+    "jobs": [
+      {
+        "id": "ff1e4df0-406d-4f33-a98f-da74aa7b2667",
+        "description": "Job",
+        "state": "completada",
+        "date_limit": "04-11-2024"
+      },
+      {
+        "id": "44b35068-f27b-4969-915b-9787dc9de3df",
+        "description": "Viva",
+        "state": "en progreso",
+        "date_limit": "07-04-2024"
+      },
+      {
+        "id": "ff1e4df0-406d-4f33-a98f-da74aa7b2667",
+        "description": "Job",
+        "state": "pendiente",
+        "date_limit": "04-11-2024"
+      }
+    ]
+  },
+  {
+    "id": "863ac31b-17c9-4ec0-8214-e13bb4a5120a",
+    "name": "Trippledex",
+    "date_init": "04-03-2024",
+    "jobs": [
+      {
+        "id": "93ef2c7b-659e-47bf-855d-0a1bd7d5d20f",
+        "description": "Prodder",
+        "state": "completada",
+        "date_limit": "17-12-2023"
+      }
+    ]
+  },
+  {
+    "id": "553d235a-8980-4088-a49e-d00d92ca4897",
+    "name": "Matsoft",
+    "date_init": "10-12-2023",
+    "jobs": [
+      {
+        "id": "643b5a34-257c-4ff3-b207-c1b0ab296eb9",
+        "description": "Zaam-Dox",
+        "state": "en progreso",
+        "date_limit": "27-04-2024"
+      },
+      {
+        "id": "8760460e-71f9-4482-8843-0ebb55cd7ce4",
+        "description": "Fintone",
+        "state": "completada",
+        "date_limit": "29-04-2024"
+      }
+    ]
+  },
+  {
+    "id": "c88969d6-634a-4f77-9461-387839da30f3",
+    "name": "Alphazap",
+    "date_init": "22-01-2024",
+    "jobs": []
+  },
+  {
+    "id": "ae002140-ae89-46b0-a364-ab2b6599cfe9",
+    "name": "Ronstring",
+    "date_init": "12-11-2024",
+    "jobs": []
+  },
+  {
+    "id": "97702430-9536-49d4-bfbf-e3bd66133036",
+    "name": "Subin",
+    "date_init": "14-01-2024",
+    "jobs": []
+  },
+  {
+    "id": "Ejercicio1-b731-4213-b8a7-eefc2650daf5",
+    "name": "PruebaEjercicio1",
+    "date_init": "02-10-2024",
+    "jobs": []
+  },
+  {
+    "id": "15744ba6-c879-4af6-bcf6-f9d19d15b142",
+    "name": "Aerified",
+    "date_init": "07-09-2024",
+    "jobs": []
+  },
+  {
+    "id": "d98d1577-2015-4875-9665-c0f453b37776",
+    "name": "Prodder",
+    "date_init": "22-03-2024",
+    "jobs": []
+  },
+  {
+    "id": "af7ee705-c0c6-4683-abee-d78c661a6bc7",
+    "name": "Otcom",
+    "date_init": "21-07-2024",
+    "jobs": []
+  }
 ]
