@@ -45,7 +45,14 @@ if (projectSelected) {
 }
 
 function sortJobinProject(project: Project) {
-  project.jobs.sort();
+  console.log("Entro")
+  project.jobs.sort((a,b)  => {
+    console.log("first")
+    const dateA = new Date(a.date_limit);
+    const dateB = new Date(b.date_limit);
+    return dateA.getTime() - dateB.getTime();
+    
+  });
 }
 
 console.log(projectSelected)

@@ -5,22 +5,22 @@
     "date_init": "17-10-2024",
     "jobs": [
       {
-        "id": "ff1e4df0-406d-4f33-a98f-da74aa7b2667",
-        "description": "Job",
-        "state": "completada",
-        "date_limit": "04-11-2024"
+        "id": "93ef2c7b-659e-47bf-855d-0a1bd7d5d20f",
+        "description": "Prodder",
+        "state": "en progreso",
+        "date_limit": "17-12-2024"
       },
       {
         "id": "44b35068-f27b-4969-915b-9787dc9de3df",
         "description": "Viva",
-        "state": "en progreso",
-        "date_limit": "07-04-2024"
+        "state": "completada",
+        "date_limit": "07-04-2023"
       },
       {
         "id": "ff1e4df0-406d-4f33-a98f-da74aa7b2667",
         "description": "Job",
         "state": "pendiente",
-        "date_limit": "04-11-2024"
+        "date_limit": "04-11-2025"
       }
     ]
   },
