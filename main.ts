@@ -1,9 +1,7 @@
 import { Project, Job } from "./models/models";
 import data_project from "./data/data_project.json";
-import data_job from "./data/data_jobs.json";
 
 let projects: Project[] = [...data_project];
-let jobs: Job[] = [...data_job];
 
 /*Implementa una función que permita añadir nuevas tareas a un proyecto.*/
 function excersise1() {
@@ -11,7 +9,7 @@ function excersise1() {
     id: "job1-f27b-4969-915b-9787dc9de3df",
     description: "Job1",
     state: "pendiente",
-    date_limit: "22-06-2025",
+    date_limit: "01-06-2025",
   };
   const idProject = "Ejercicio1-b731-4213-b8a7-eefc2650daf5";
 
@@ -36,6 +34,23 @@ estado*/
 
 function excersise2(){
 
+  const idProject = "Ejercicio1-b731-4213-b8a7-eefc2650daf5";
+
+  const projectSelected = projects.find((project) => project.id === idProject);
+
+  console.log(projectSelected);
+
+  if (projectSelected) {
+    projectSummary(projectSelected);
+  }
+
+  function projectSummary(projectSelected: Project) {
+    projectSelected.jobs.map
+  }
+  
+
+
+
 }
 
 /*Crea una función que ordene las tareas de un proyecto por fecha límite
@@ -45,6 +60,8 @@ function excersise3(){
 
   const idProject2 = "Ejercicio2-b731-4213-b8a7-eefc2650daf5";
   const projectSelected = projects.find((project) => project.id === idProject2);
+
+  console.log(projectSelected)
   
   if (projectSelected) {
     sortJobinProject(projectSelected);
@@ -79,8 +96,39 @@ function excersise5(){
   const idProject5 = "Ejercicio5-b731-4213-b8a7-eefc2650daf5";
   const projectSelected = projects.find((project) => project.id === idProject5);
   
-  if (projectSelected) {    
+  if (projectSelected) {   
+    calculateRemainingTime(projectSelected);
   }
+
+  function calculateRemainingTime(project:Project) {
+
+    const today = new Date();
+
+    console.log(`hoy es: ${today}`)
+
+    let remainingDays = project.jobs.reduce((acc, curr) => {      
+
+      const dateLimit = new Date(curr.date_limit);
+
+      if (curr.state === "pendiente" || curr.state === "en progreso") {//se consideran tanto los projectos pendientes como los en procesos
+
+        const diffTime = dateLimit.getTime() - today.getTime();
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+        if (diffDays > 0) {
+          acc += diffDays;
+        } else {
+          acc += 0;
+        }
+
+      }
+
+      return acc;
+    }, 0);
+
+    console.log(`Los dias restante para el projecto es: ${remainingDays}`);
+  }
+
 
   
 
@@ -157,3 +205,4 @@ excersise8();
 console.log("Ejercicio 9");
 console.log();
 excersise9();
+

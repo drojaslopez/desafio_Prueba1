@@ -32,8 +32,14 @@
       {
         "id": "93ef2c7b-659e-47bf-855d-0a1bd7d5d20f",
         "description": "Prodder",
-        "state": "completada",
-        "date_limit": "17-12-2023"
+        "state": "pendiente",
+        "date_limit": "12-01-2024"
+      },
+      {
+        "id": "643b5a34-257c-4ff3-b207-c1b0ab296eb9",
+        "description": "Zaam-Dox",
+        "state": "en progreso",
+        "date_limit": "11-20-2024"
       }
     ]
   },
