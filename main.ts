@@ -36,55 +36,93 @@ estado*/
 
 function excersise2(){
 
-
-const idProject2 = "Ejercicio2-b731-4213-b8a7-eefc2650daf5";
-const projectSelected = projects.find((project) => project.id === idProject2);
-
-if (projectSelected) {
-  sortJobinProject(projectSelected);
-}
-
-function sortJobinProject(project: Project) {
-  console.log("Entro")
-  project.jobs.sort((a,b)  => {
-    console.log("first")
-    const dateA = new Date(a.date_limit);
-    const dateB = new Date(b.date_limit);
-    return dateA.getTime() - dateB.getTime();
-    
-  });
-}
-
-console.log(projectSelected)
-    
 }
 
 /*Crea una función que ordene las tareas de un proyecto por fecha límite
 utilizando el método sort de JavaScript */
+function excersise3(){
+
+
+  const idProject2 = "Ejercicio2-b731-4213-b8a7-eefc2650daf5";
+  const projectSelected = projects.find((project) => project.id === idProject2);
+  
+  if (projectSelected) {
+    sortJobinProject(projectSelected);
+  }
+  
+  function sortJobinProject(project: Project) {
+    console.log("Entro")
+    project.jobs.sort((a,b)  => {
+      console.log("first")
+      const dateA = new Date(a.date_limit);
+      const dateB = new Date(b.date_limit);
+      return dateA.getTime() - dateB.getTime();
+      
+    });
+  }
+  
+  console.log(projectSelected)
+      
+  }
 
 /*Crea una función de orden superior filtrarTareasProyecto que tome una
 función de filtrado como argumento y la aplique a la lista de tareas de un
 proyecto */
+function excersise4(){
+
+}
+
 
 /* Implementa una función calcularTiempoRestante que utilice el método
 reduce para calcular el número total de días que faltan para completar todas
 las tareas pendientes de un proyecto
  */
+function excersise5(){
+  const idProject5 = "Ejercicio5-b731-4213-b8a7-eefc2650daf5";
+  const projectSelected = projects.find((project) => project.id === idProject5);
+  
+  if (projectSelected) {    
+  }
+
+  
+
+}
+
 
 /*Desarrolla una función obtenerTareasCriticas que identifique y retorne las
 tareas que están a menos de 3 días de su fecha límite y aún no están
 completadas */
 
+function excersise6(){
+
+}
+
+
 /*Desarrolla una función cargarDetallesProyecto que simule una llamada
 asíncrona a una API para cargar los detalles de un proyecto.
 Utiliza Promises o async/await.*/
+
+function excersise7(){
+
+}
 
 /*Crea una función actualizarEstadoTarea que simule la actualización del
 estado de una tarea en el servidor y maneje tanto el caso de éxito como el de
 error. */
 
+function excersise8(){
+
+}
+
 /*Implementa un sistema simple de notificacionesTareas que permita a
 diferentes partes del código "escuchar" cuando se completa una tarea */
+
+function excersise9(){
+
+}
+
+
+
 
 console.log("Ejercicio 1");
 console.log();
@@ -94,4 +132,7 @@ console.log("Ejercicio 2");
 console.log();
 excersise2();
 
+console.log("Ejercicio 3");
+console.log();
+excersise3();
 
