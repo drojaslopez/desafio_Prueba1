@@ -50,10 +50,8 @@ function excersise3(){
     sortJobinProject(projectSelected);
   }
   
-  function sortJobinProject(project: Project) {
-    console.log("Entro")
+  function sortJobinProject(project: Project) {    
     project.jobs.sort((a,b)  => {
-      console.log("first")
       const dateA = new Date(a.date_limit);
       const dateB = new Date(b.date_limit);
       return dateA.getTime() - dateB.getTime();
@@ -126,13 +124,36 @@ function excersise9(){
 
 console.log("Ejercicio 1");
 console.log();
-excersise1();
+//excersise1();
 
 console.log("Ejercicio 2");
 console.log();
-excersise2();
+//excersise2();
 
 console.log("Ejercicio 3");
 console.log();
-excersise3();
+//excersise3();
 
+console.log("Ejercicio 4");
+console.log();
+excersise4();
+
+console.log("Ejercicio 5");
+console.log();
+excersise5();
+
+console.log("Ejercicio 6");
+console.log();
+excersise6();
+
+console.log("Ejercicio 7");
+console.log();
+excersise7();
+
+console.log("Ejercicio 8");
+console.log();
+excersise8();
+
+console.log("Ejercicio 9");
+console.log();
+excersise9();
