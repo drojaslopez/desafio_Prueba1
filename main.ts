@@ -93,6 +93,7 @@ reduce para calcular el número total de días que faltan para completar todas
 las tareas pendientes de un proyecto
  */
 function excersise5(){
+
   const idProject5 = "Ejercicio5-b731-4213-b8a7-eefc2650daf5";
   const projectSelected = projects.find((project) => project.id === idProject5);
   
@@ -134,7 +135,6 @@ function excersise5(){
 
 }
 
-
 /*Desarrolla una función obtenerTareasCriticas que identifique y retorne las
 tareas que están a menos de 3 días de su fecha límite y aún no están
 completadas */
@@ -143,12 +143,30 @@ function excersise6(){
 
 }
 
-
 /*Desarrolla una función cargarDetallesProyecto que simule una llamada
 asíncrona a una API para cargar los detalles de un proyecto.
 Utiliza Promises o async/await.*/
 
 function excersise7(){
+  /*
+  // Versión con Promises
+// Ahora asinc1 y asinc2 se supone que retornan una Promise
+function main() {
+  asinc1(parametros)
+  .then(function(r1){ return asinc2(r1); })
+  .then(function(r2){
+  console.log("Resultado final: " + r2); 
+  })
+}
+
+// Lo anterior puede escribirse aún más concisamente así:
+function main() {
+  asinc1(parametros)
+  .then(asinc2)
+  .then(function(r2){
+  console.log("Resultado final: " + r2); 
+})}*/
+
 
 }
 
@@ -158,7 +176,38 @@ error. */
 
 function excersise8(){
 
+  let state = "Completada";
+  const idProject = "553d235a-8980-4088-a49e-d00d92ca4897";
+  const idJob = "643b5a34-257c-4ff3-b207-c1b0ab296eb9"; 
+
+  updateStatusTask();
+  async function updateStatusTask() {
+    try {
+      const data = await updateStatusDB(state, idProject, idJob);      
+      console.log("http 200 ok"); 
+      console.log(data);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  function updateStatusDB(state: string, idProject: string  , idJob: string) {      
+  const projectSelected = projects.find((project) => project.id === idProject);  
+  console.log(projectSelected)
+    if(projectSelected){
+      projectSelected.jobs.forEach(job => {
+          if(job.id === idJob) {
+            job.state=state;
+          }
+      });     
+    }
+
+  return projectSelected;
+
+  }
 }
+
+
 
 /*Implementa un sistema simple de notificacionesTareas que permita a
 diferentes partes del código "escuchar" cuando se completa una tarea */
@@ -171,38 +220,43 @@ function excersise9(){
 
 
 console.log("Ejercicio 1");
-console.log();
 //excersise1();
+console.log("Listo");
+console.log();
 
 console.log("Ejercicio 2");
-console.log();
 //excersise2();
+console.log("Falta un poco");
 
 console.log("Ejercicio 3");
-console.log();
 //excersise3();
+console.log("Listo");
 
 console.log("Ejercicio 4");
-console.log();
 excersise4();
+console.log();
 
 console.log("Ejercicio 5");
-console.log();
 excersise5();
+console.log("En Proceso");
 
 console.log("Ejercicio 6");
-console.log();
 excersise6();
+console.log();
 
 console.log("Ejercicio 7");
-console.log();
 excersise7();
+console.log();
 
 console.log("Ejercicio 8");
+console.log("Listo");
+//excersise8();
 console.log();
-excersise8();
 
 console.log("Ejercicio 9");
-console.log();
 excersise9();
+console.log();
+
+
+
 
