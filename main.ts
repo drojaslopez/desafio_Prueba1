@@ -27,6 +27,7 @@ function excersise1() {
 
   console.log(projectSelected);
 }
+
 /*Desarrolla una función que utilice métodos de array (map, filter, reduce) para
 generar un resumen del proyecto mostrando el número de tareas en cada
 estado*/
@@ -41,19 +42,13 @@ function excersise2() {
   }
 
   function projectSummary(projectSelected: Project) {
-    const conteoPorEstado = projectSelected.jobs.reduce((acc, job) => {
+    const conteoPorEstado = projectSelected.jobs.reduce(
+      (acc, job) => {
       acc[job.state] = acc[job.state] || 0 + 1;
       return acc;
-    }, {});
+    });
     return conteoPorEstado;
   }
-
-  /*const conteoPorEstado = productos.reduce((acc, producto) => {
-    acc[producto.estado] = (acc[producto.estado] || 0) + 1;
-    return acc;
-}, {});
-
-console.log(conteoPorEstado);*/
 }
 
 /*Crea una función que ordene las tareas de un proyecto por fecha límite
@@ -219,7 +214,6 @@ console.log();
 
 console.log("Ejercicio 5");
 excersise5();
-console.log("En Proceso");
 
 console.log("Ejercicio 6");
 excersise6();
