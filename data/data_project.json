@@ -33,52 +33,100 @@
         "id": "93ef2c7b-659e-47bf-855d-0a1bd7d5d20f",
         "description": "Prodder",
         "state": "pendiente",
-        "date_limit": "11-18-2024"
+        "date_limit": "12-01-2024"
       },
       {
         "id": "643b5a34-257c-4ff3-b207-c1b0ab296eb9",
         "description": "Zaam-Dox",
         "state": "en progreso",
-        "date_limit": "11-20-2024"
+        "date_limit": "12-20-2024"
       }
     ]
   },
   {
-    "id": "553d235a-8980-4088-a49e-d00d92ca4897",
+    "id": "Ejercicio3-b731-4213-b8a7-eefc2650daf5",
     "name": "Matsoft",
     "date_init": "10-12-2023",
     "jobs": [
       {
+        "id": "93ef2c7b-659e-47bf-855d-0a1bd7d5d20f",
+        "description": "Prodder",
+        "state": "en progreso",
+        "date_limit": "05-12-2024"
+      },
+      {
+        "id": "44b35068-f27b-4969-915b-9787dc9de3df",
+        "description": "Viva",
+        "state": "completada",
+        "date_limit": "07-04-2023"
+      },
+      {
         "id": "643b5a34-257c-4ff3-b207-c1b0ab296eb9",
         "description": "Zaam-Dox",
         "state": "en progreso",
-        "date_limit": "27-04-2024"
+        "date_limit": "08-04-2025"
       },
       {
         "id": "8760460e-71f9-4482-8843-0ebb55cd7ce4",
         "description": "Fintone",
         "state": "completada",
-        "date_limit": "29-04-2024"
+        "date_limit": "12-04-2026"
       }
     ]
   },
   {
-    "id": "c88969d6-634a-4f77-9461-387839da30f3",
+    "id": "Ejercicio5-634a-4f77-9461-387839da30f3",
     "name": "Alphazap",
     "date_init": "22-01-2024",
-    "jobs": []
+    "jobs": [
+    {
+      "id": "643b5a34-257c-4ff3-b207-c1b0ab296eb9",
+      "description": "Zaam-Dox",
+      "state": "pendiente",
+      "date_limit": "12-04-2024"
+    },
+    {
+      "id": "8760460e-71f9-4482-8843-0ebb55cd7ce4",
+      "description": "Fintone",
+      "state": "completada",
+      "date_limit": "29-04-2024"
+    }]
   },
   {
-    "id": "ae002140-ae89-46b0-a364-ab2b6599cfe9",
+    "id": "Ejercicio8-8980-4088-a49e-d00d92ca4897",
     "name": "Ronstring",
     "date_init": "12-11-2024",
-    "jobs": []
+    "jobs": [{
+      "id": "643b5a34-257c-4ff3-b207-c1b0ab296eb9",
+      "description": "Zaam-Dox",
+      "state": "en progreso",
+      "date_limit": "27-04-2024"
+    },
+    {
+      "id": "8760460e-71f9-4482-8843-0ebb55cd7ce4",
+      "description": "Fintone",
+      "state": "completada",
+      "date_limit": "29-04-2024"
+    }
+  ]
   },
   {
-    "id": "97702430-9536-49d4-bfbf-e3bd66133036",
+    "id": "Ejercicio6-b731-4213-b8a7-eefc2650daf5",
     "name": "Subin",
     "date_init": "14-01-2024",
-    "jobs": []
+    "jobs": [{
+      "id": "643b5a32-257c-4ff3-b207-c1b0ab296eb9",
+      "description": "Zaam-Dox",
+      "state": "en progreso",
+      "date_limit": "11-20-2024"
+    },
+    {
+      "id": "643b5a33-257c-4ff3-b207-c1b0ab296eb9",
+      "description": "Zaam-Dox",
+      "state": "en progreso",
+      "date_limit": "11-22-2024"
+    }
+  ]
   },
   {
     "id": "Ejercicio1-b731-4213-b8a7-eefc2650daf5",

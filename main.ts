@@ -63,11 +63,9 @@ function excersise2() {
 /*Crea una función que ordene las tareas de un proyecto por fecha límite
 utilizando el método sort de JavaScript */
 function excersise3() {
-  const idProject2 = "Ejercicio2-b731-4213-b8a7-eefc2650daf5";
+  const idProject2 = "Ejercicio3-b731-4213-b8a7-eefc2650daf5";
   const projectSelected = projects.find((project) => project.id === idProject2);
-
   console.log(projectSelected);
-
   if (projectSelected) {
     console.log(sortJobinProject(projectSelected));
   }
@@ -119,6 +117,7 @@ function excersise5() {
       return acc;
     }, 0);
     console.log(`Los dias restante para el projecto es: ${remainingDays}`);
+    console.log()
   }
 }
 
@@ -127,10 +126,11 @@ tareas que están a menos de 3 días de su fecha límite y aún no están
 completadas */
 function excersise6() {
 
-  const idProject = "Ejercicio5-b731-4213-b8a7-eefc2650daf5";
+  const idProject = "Ejercicio6-b731-4213-b8a7-eefc2650daf5";
   const projectSelected = projects.find((project) => project.id === idProject);
 
   if (projectSelected) {
+    console.log("tareas Criticas")
     console.log(getTaskCritiques(projectSelected));
   }
 
@@ -185,7 +185,7 @@ error. */
 
 function excersise8() {
   let state = "Completada";
-  const idProject = "553d235a-8980-4088-a49e-d00d92ca4897";
+  const idProject = "Ejercicio8-8980-4088-a49e-d00d92ca4897";
   const idJob = "643b5a34-257c-4ff3-b207-c1b0ab296eb9";
 
   updateStatusTask();
@@ -223,8 +223,6 @@ diferentes partes del código "escuchar" cuando se completa una tarea */
 function excersise9() {}
 
 
-
-/*
 console.log("Ejercicio 1");
 excersise1();
 
@@ -234,26 +232,25 @@ excersise2();
 console.log("Ejercicio 3");
 excersise3();
 
-*/
-console.log("Ejercicio 4");
-excersise4();
-/*
-
 console.log("Ejercicio 5");
-//excersise5();
+excersise5();
 
 console.log("Ejercicio 6");
 excersise6();
-
 
 console.log("Ejercicio 7");
 excersise7();
 
 console.log("Ejercicio 8");
 excersise8();
-*/
+
+/*
+console.log("Ejercicio 4");
+excersise4();
 
 console.log("Ejercicio 9");
 excersise9();
+*/
+
 
 
