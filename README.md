@@ -16,5 +16,9 @@ añadir en package.json en la seccion script
 Para ejecutar la tarea se debe iniciar la terminal y ejecutar el siguiente comando
 
 ```bash
+npm install
+
 npm run dev
 ```
+
+La configuracion de las fechas esta definida por MM/DD/YYYY

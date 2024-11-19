@@ -3,6 +3,16 @@ import data_project from "./data/data_project.json";
 
 let projects: Project[] = [...data_project];
 
+
+function sortJobinProject(project: Project) {
+  project.jobs.sort((a, b) => {
+    const dateA = new Date(a.date_limit);
+    const dateB = new Date(b.date_limit);
+    return dateA.getTime() - dateB.getTime();
+  });
+  return project;
+}
+
 /*Implementa una función que permita añadir nuevas tareas a un proyecto.*/
 function excersise1() {
   const newJob = {
@@ -31,7 +41,6 @@ function excersise1() {
 /*Desarrolla una función que utilice métodos de array (map, filter, reduce) para
 generar un resumen del proyecto mostrando el número de tareas en cada
 estado*/
-
 function excersise2() {
   const idProject = "Ejercicio2-b731-4213-b8a7-eefc2650daf5";
 
@@ -42,12 +51,12 @@ function excersise2() {
   }
 
   function projectSummary(projectSelected: Project) {
-    const conteoPorEstado = projectSelected.jobs.reduce(
+    const jobForState = projectSelected.jobs.reduce(
       (acc, job) => {
       acc[job.state] = acc[job.state] || 0 + 1;
       return acc;
     });
-    return conteoPorEstado;
+    return jobForState;
   }
 }
 
@@ -60,28 +69,14 @@ function excersise3() {
   console.log(projectSelected);
 
   if (projectSelected) {
-    sortJobinProject(projectSelected);
+    console.log(sortJobinProject(projectSelected));
   }
-
-  
-
-  function sortJobinProject(project: Project) {
-    project.jobs.sort((a, b) => {
-      const dateA = new Date(a.date_limit);
-      const dateB = new Date(b.date_limit);
-      return dateA.getTime() - dateB.getTime();
-    });
-  }
-
-  console.log(projectSelected);
 }
 
 /*Crea una función de orden superior filtrarTareasProyecto que tome una
 función de filtrado como argumento y la aplique a la lista de tareas de un
 proyecto */
 function excersise4() {
-
-
 
 
 }
@@ -91,6 +86,7 @@ reduce para calcular el número total de días que faltan para completar todas
 las tareas pendientes de un proyecto
  */
 function excersise5() {
+
   const idProject5 = "Ejercicio5-b731-4213-b8a7-eefc2650daf5";
   const projectSelected = projects.find((project) => project.id === idProject5);
 
@@ -103,11 +99,14 @@ function excersise5() {
 
     console.log(`hoy es: ${today}`);
 
-    let remainingDays = project.jobs.reduce((acc, curr) => {
+    const projectSort = sortJobinProject(project);
+
+    let remainingDays = projectSort.jobs.reduce((acc, curr) => {
+
       const dateLimit = new Date(curr.date_limit);
 
-      if (curr.state === "pendiente" || curr.state === "en progreso") {
-        //se consideran tanto los projectos pendientes como los en procesos
+      if (curr.state === "pendiente") {
+        //se consideran los projectos pendientes 
 
         const diffTime = dateLimit.getTime() - today.getTime();
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
@@ -129,32 +128,40 @@ function excersise5() {
 /*Desarrolla una función obtenerTareasCriticas que identifique y retorne las
 tareas que están a menos de 3 días de su fecha límite y aún no están
 completadas */
+function excersise6() {
 
-function excersise6() {}
+
+
+
+}
 
 /*Desarrolla una función cargarDetallesProyecto que simule una llamada
 asíncrona a una API para cargar los detalles de un proyecto.
 Utiliza Promises o async/await.*/
 
 function excersise7() {
-  /*
-  // Versión con Promises
-// Ahora asinc1 y asinc2 se supone que retornan una Promise
-function main() {
-  asinc1(parametros)
-  .then(function(r1){ return asinc2(r1); })
-  .then(function(r2){
-  console.log("Resultado final: " + r2); 
-  })
-}
 
-// Lo anterior puede escribirse aún más concisamente así:
-function main() {
-  asinc1(parametros)
-  .then(asinc2)
-  .then(function(r2){
-  console.log("Resultado final: " + r2); 
-})}*/
+const idProject5 = "Ejercicio5-b731-4213-b8a7-eefc2650daf5";
+
+uploadProject(idProject5);
+
+  async function uploadProject(idProject:string) {
+    try {
+      const data = await loadData(idProject);
+      console.log("http 200 ok");
+      return data;
+    } catch (error) {
+      console.log("Error");
+      console.error(error);
+    }
+  }
+
+  function loadData(idProject: string) {  
+    const projectSelected = projects.find((project) => project.id === idProject);
+    console.log(projectSelected);
+  }
+
+  
 }
 
 /*Crea una función actualizarEstadoTarea que simule la actualización del
@@ -178,6 +185,7 @@ function excersise8() {
   }
 
   function updateStatusDB(state: string, idProject: string, idJob: string) {
+    
     const projectSelected = projects.find(
       (project) => project.id === idProject
     );
@@ -199,36 +207,39 @@ diferentes partes del código "escuchar" cuando se completa una tarea */
 
 function excersise9() {}
 
+
+
+/*
 console.log("Ejercicio 1");
-//excersise1();
+excersise1();
 
 console.log("Ejercicio 2");
-//excersise2();
+excersise2();
 
 console.log("Ejercicio 3");
-//excersise3();
+excersise3();
 
+*/
 console.log("Ejercicio 4");
 excersise4();
-console.log();
+
 
 console.log("Ejercicio 5");
-excersise5();
+//excersise5();
 
 console.log("Ejercicio 6");
 excersise6();
 console.log();
 
+/*
 console.log("Ejercicio 7");
 excersise7();
-console.log();
 
 console.log("Ejercicio 8");
-console.log("Listo");
-//excersise8();
-console.log();
+excersise8();
+*/
 
 console.log("Ejercicio 9");
 excersise9();
-console.log();
+
 
