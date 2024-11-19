@@ -79,6 +79,7 @@ proyecto */
 function excersise4() {
 
 
+
 }
 
 /* Implementa una función calcularTiempoRestante que utilice el método
@@ -101,26 +102,22 @@ function excersise5() {
 
     const projectSort = sortJobinProject(project);
 
-    let remainingDays = projectSort.jobs.reduce((acc, curr) => {
+    let remainingDays = projectSort.jobs.reduce((acc, job) => {
 
-      const dateLimit = new Date(curr.date_limit);
+      const dateLimit = new Date(job.date_limit);
 
-      if (curr.state === "pendiente") {
+      if (job.state === "pendiente") {
         //se consideran los projectos pendientes 
-
         const diffTime = dateLimit.getTime() - today.getTime();
         const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-
         if (diffDays > 0) {
           acc += diffDays;
         } else {
           acc += 0;
         }
       }
-
       return acc;
     }, 0);
-
     console.log(`Los dias restante para el projecto es: ${remainingDays}`);
   }
 }
@@ -130,8 +127,26 @@ tareas que están a menos de 3 días de su fecha límite y aún no están
 completadas */
 function excersise6() {
 
+  const idProject = "Ejercicio5-b731-4213-b8a7-eefc2650daf5";
+  const projectSelected = projects.find((project) => project.id === idProject);
 
+  if (projectSelected) {
+    console.log(getTaskCritiques(projectSelected));
+  }
 
+  function getTaskCritiques(project: Project, ) {
+    const today = new Date();
+    const jobTaskCritiques: Job[]=[];
+    project.jobs.forEach(job => {
+      const dateLimit = new Date(job.date_limit);
+
+      const diffDays = Math.ceil((dateLimit.getTime() - today.getTime()) / (1000 * 60 * 60 * 24));
+      if(diffDays<=3 && job.state!="completa"){
+        jobTaskCritiques.push(job);
+      }
+    });
+    return jobTaskCritiques;
+  }
 
 }
 
@@ -222,16 +237,15 @@ excersise3();
 */
 console.log("Ejercicio 4");
 excersise4();
-
+/*
 
 console.log("Ejercicio 5");
 //excersise5();
 
 console.log("Ejercicio 6");
 excersise6();
-console.log();
 
-/*
+
 console.log("Ejercicio 7");
 excersise7();
 
